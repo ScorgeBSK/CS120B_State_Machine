@@ -27,14 +27,14 @@ echo ======================================================\n
 echo Running all tests..."\n\n
 
 # Example test:
-test "PINA: 0x00, PINB: 0x00 => PORTC: 0"
+test "State init to buttonPressed"
 # Set inputs
-setPINA 0x00
-setPINB 0x00
+set state = init
+setPINA = 0x01
 # Continue for several ticks
 continue 2
 # Set expect values
-expectPORTC 0
+expectPORTB 0x02
 # Check pass/fail
 checkResult
 
